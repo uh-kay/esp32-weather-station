@@ -1,6 +1,6 @@
 # ESP32 Weather Station
 
-This project is an ESP32-based weather station that measures temperature, humidity, pressure, UV index, and detects rain, using BME680 sensor, GUVA-S12SD sensor, and rain sensor. It also a 128x128 ST7735 LCD display for displaying the data. The weather station connects to a WiFi network and publishes weather data to AWS IoT Core MQTT broker.
+This project is an ESP32-based weather station that measures temperature, humidity, pressure, UV index, and detects rain, using BME680 sensor, GUVA-S12SD sensor, and rain sensor. It also uses a 128x128 ST7735 LCD display for displaying the data. The weather station connects to a WiFi network and publishes weather data to AWS IoT Core MQTT broker.
 
 ## Structure of the Code
 
