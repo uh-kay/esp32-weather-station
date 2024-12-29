@@ -178,7 +178,7 @@ fn main() -> Result<()> {
     info!("Starting main loop");
 
     loop {
-        delay.delay_ms(5000u32);
+        delay.delay_ms(30000u32);
 
         // Check wifi connection and try reconnecting
         if !wifi.is_connected()? {
