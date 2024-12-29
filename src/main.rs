@@ -30,12 +30,12 @@ fn main() -> Result<()> {
     let sysloop = EspSystemEventLoop::take()?;
 
     // BME680 pins
-    let sda = peripherals.pins.gpio22;
-    let scl = peripherals.pins.gpio23;
+    let sda = peripherals.pins.gpio27;
+    let scl = peripherals.pins.gpio14;
 
     // Rain sensor pins
-    let d0 = PinDriver::input(peripherals.pins.gpio19)?;
-    let mut power = PinDriver::output(peripherals.pins.gpio21)?;
+    let d0 = PinDriver::input(peripherals.pins.gpio12)?;
+    let mut power = PinDriver::output(peripherals.pins.gpio13)?;
 
     // GUVA-S12SD pins
     let adc = AdcDriver::new(peripherals.adc1)?;
@@ -47,10 +47,10 @@ fn main() -> Result<()> {
     let mut adc_pin = AdcChannelDriver::new(&adc, peripherals.pins.gpio35, &adc_config).unwrap();
 
     // ST7735 LCD pins
-    let dc = PinDriver::output(peripherals.pins.gpio27)?;
+    let dc = PinDriver::output(peripherals.pins.gpio15)?;
     let sclk = peripherals.pins.gpio18;
     let mosi = peripherals.pins.gpio5;
-    let cs = peripherals.pins.gpio26;
+    let cs = peripherals.pins.gpio2;
     let rst = PinDriver::output(peripherals.pins.gpio4)?;
 
     // SPI config
