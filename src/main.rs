@@ -225,7 +225,7 @@ fn main() -> Result<()> {
             humidity: data.humidity_percent() as u32,
             pressure: data.pressure_hpa() as u32,
             gas_resistance: data.gas_resistance_ohm() as u32,
-            rain: if Level::Low == rain_state {
+            rain: if Level::High == rain_state {
                 false
             } else {
                 true
